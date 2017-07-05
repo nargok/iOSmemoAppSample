@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2421896EC12CBD6B74409E05 /* Pods_RailsMemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D42913ADAA9B8FC0A1F13121 /* Pods_RailsMemoApp.framework */; };
 		280EB4351F0CA089008119A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280EB4341F0CA089008119A8 /* AppDelegate.swift */; };
 		280EB4371F0CA089008119A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280EB4361F0CA089008119A8 /* ViewController.swift */; };
 		280EB43A1F0CA089008119A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280EB4381F0CA089008119A8 /* Main.storyboard */; };
 		280EB43C1F0CA089008119A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 280EB43B1F0CA089008119A8 /* Assets.xcassets */; };
 		280EB43F1F0CA089008119A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 280EB43D1F0CA089008119A8 /* LaunchScreen.storyboard */; };
+		280EB44A1F0CA170008119A8 /* StockMemos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280EB4491F0CA170008119A8 /* StockMemos.swift */; };
+		280EB44C1F0CA17C008119A8 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280EB44B1F0CA17C008119A8 /* Memo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D5F2001D4522E7399BA38A8 /* Pods-RailsMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsMemoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-RailsMemoApp/Pods-RailsMemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		280EB4311F0CA089008119A8 /* RailsMemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RailsMemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		280EB4341F0CA089008119A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		280EB4361F0CA089008119A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		280EB43B1F0CA089008119A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		280EB43E1F0CA089008119A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		280EB4401F0CA089008119A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		280EB4491F0CA170008119A8 /* StockMemos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockMemos.swift; sourceTree = "<group>"; };
+		280EB44B1F0CA17C008119A8 /* Memo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		9C5317A3E15318A748976030 /* Pods-RailsMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailsMemoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RailsMemoApp/Pods-RailsMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D42913ADAA9B8FC0A1F13121 /* Pods_RailsMemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailsMemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2421896EC12CBD6B74409E05 /* Pods_RailsMemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236DDB685D6B476093274AC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9C5317A3E15318A748976030 /* Pods-RailsMemoApp.debug.xcconfig */,
+				0D5F2001D4522E7399BA38A8 /* Pods-RailsMemoApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		280EB4281F0CA089008119A8 = {
 			isa = PBXGroup;
 			children = (
 				280EB4331F0CA089008119A8 /* RailsMemoApp */,
 				280EB4321F0CA089008119A8 /* Products */,
+				236DDB685D6B476093274AC1 /* Pods */,
+				75BE12BEB949E0342A371752 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,7 @@
 		280EB4331F0CA089008119A8 /* RailsMemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				280EB4461F0CA13C008119A8 /* Models */,
 				280EB4341F0CA089008119A8 /* AppDelegate.swift */,
 				280EB4361F0CA089008119A8 /* ViewController.swift */,
 				280EB4381F0CA089008119A8 /* Main.storyboard */,
@@ -64,6 +85,39 @@
 			path = RailsMemoApp;
 			sourceTree = "<group>";
 		};
+		280EB4461F0CA13C008119A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				280EB4471F0CA14C008119A8 /* Model Manager */,
+				280EB4481F0CA155008119A8 /* Model Object */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		280EB4471F0CA14C008119A8 /* Model Manager */ = {
+			isa = PBXGroup;
+			children = (
+				280EB4491F0CA170008119A8 /* StockMemos.swift */,
+			);
+			name = "Model Manager";
+			sourceTree = "<group>";
+		};
+		280EB4481F0CA155008119A8 /* Model Object */ = {
+			isa = PBXGroup;
+			children = (
+				280EB44B1F0CA17C008119A8 /* Memo.swift */,
+			);
+			name = "Model Object";
+			sourceTree = "<group>";
+		};
+		75BE12BEB949E0342A371752 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D42913ADAA9B8FC0A1F13121 /* Pods_RailsMemoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 280EB4431F0CA089008119A8 /* Build configuration list for PBXNativeTarget "RailsMemoApp" */;
 			buildPhases = (
+				C62F2F47E807DE08C8810944 /* [CP] Check Pods Manifest.lock */,
 				280EB42D1F0CA089008119A8 /* Sources */,
 				280EB42E1F0CA089008119A8 /* Frameworks */,
 				280EB42F1F0CA089008119A8 /* Resources */,
+				45458D1B513D821184C13243 /* [CP] Embed Pods Frameworks */,
+				561AEF325076C6BEF5F3D375 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +189,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45458D1B513D821184C13243 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsMemoApp/Pods-RailsMemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		561AEF325076C6BEF5F3D375 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RailsMemoApp/Pods-RailsMemoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C62F2F47E807DE08C8810944 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		280EB42D1F0CA089008119A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +244,8 @@
 			files = (
 				280EB4371F0CA089008119A8 /* ViewController.swift in Sources */,
 				280EB4351F0CA089008119A8 /* AppDelegate.swift in Sources */,
+				280EB44A1F0CA170008119A8 /* StockMemos.swift in Sources */,
+				280EB44C1F0CA17C008119A8 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,10 +366,12 @@
 		};
 		280EB4441F0CA089008119A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C5317A3E15318A748976030 /* Pods-RailsMemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TT8GVVJPDM;
 				INFOPLIST_FILE = RailsMemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryoichi.gokan.RailsMemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +381,12 @@
 		};
 		280EB4451F0CA089008119A8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5F2001D4522E7399BA38A8 /* Pods-RailsMemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = TT8GVVJPDM;
 				INFOPLIST_FILE = RailsMemoApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ryoichi.gokan.RailsMemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +413,7 @@
 				280EB4451F0CA089008119A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

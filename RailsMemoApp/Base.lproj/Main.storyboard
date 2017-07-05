@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RailsMemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gsW-k8-dUx" userLabel="HeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ帳" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNw-VG-xWX">
+                                        <rect key="frame" x="161" y="27" width="52" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKT-Fq-aDF">
+                                        <rect key="frame" x="313" y="35" width="52" height="30"/>
+                                        <state key="normal" title="保存">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UO3-bR-ISd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34037937422351328" green="0.4172414644719239" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="YNw-VG-xWX" firstAttribute="centerX" secondItem="gsW-k8-dUx" secondAttribute="centerX" id="5MY-nn-wAC"/>
+                                    <constraint firstAttribute="trailing" secondItem="WKT-Fq-aDF" secondAttribute="trailing" constant="10" id="APd-Ei-x45"/>
+                                    <constraint firstItem="WKT-Fq-aDF" firstAttribute="leading" secondItem="YNw-VG-xWX" secondAttribute="trailing" constant="100" id="JZn-zj-f8N"/>
+                                    <constraint firstAttribute="bottom" secondItem="WKT-Fq-aDF" secondAttribute="bottom" constant="10" id="di3-9c-c96"/>
+                                    <constraint firstAttribute="height" constant="75" id="kLC-Nx-tAI"/>
+                                    <constraint firstItem="YNw-VG-xWX" firstAttribute="centerY" secondItem="gsW-k8-dUx" secondAttribute="centerY" id="rxf-kL-Olh"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zid-Cm-g9N">
+                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zid-Cm-g9N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8OO-lF-gFz"/>
+                            <constraint firstItem="gsW-k8-dUx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="EWr-Ii-fvZ"/>
+                            <constraint firstAttribute="trailing" secondItem="gsW-k8-dUx" secondAttribute="trailing" id="IPg-4I-KDb"/>
+                            <constraint firstAttribute="trailing" secondItem="zid-Cm-g9N" secondAttribute="trailing" id="Otx-R6-uO2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zid-Cm-g9N" secondAttribute="bottom" id="cgQ-hl-Q4u"/>
+                            <constraint firstItem="zid-Cm-g9N" firstAttribute="top" secondItem="gsW-k8-dUx" secondAttribute="bottom" id="dFy-Ob-1Tt"/>
+                            <constraint firstItem="gsW-k8-dUx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eNJ-tV-6LK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="zid-Cm-g9N" id="CKS-Qx-sVC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
